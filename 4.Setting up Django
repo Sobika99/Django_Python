@@ -1,0 +1,12 @@
+(env) PS C:\Users\HP\desktop\django\jobapp> python3 --version
+
+>> will popup error
+
+//setting up Django
+>>pip3 install django
+
+//confirming instlation
+>> pip3 list
+
+//checking version
+>> django-admin --version
