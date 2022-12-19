@@ -1,0 +1,7 @@
+created folder as following :
+>> desktop
+>> django
+>> jobapp
+
+In windows powershell , command used to create VE:
+>> C:\Users\HP\desktop\django\jobapp> python3 -m venv env
