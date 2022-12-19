@@ -1,0 +1,6 @@
+ make sure the script been activated
+ 
+ //creating our first project
+ >>django-admin startproject jobapp
+ 
+ //setup 
