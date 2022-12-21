@@ -1,0 +1,25 @@
+views.py
+
+from django.shortcuts import render
+from django.http import HttpResponse
+# Create your views here.
+def hello(request):
+    return HttpResponse("<h3>Hello World</h3>")
+
+#"<Domain>/job/1" --> job detail page
+
+def job_detail(request,id):
+    #return HttpResponse(f"<h1>Job Detail page {id}</h1>")
+    site = "https://google.com"
+    return HttpResponse(f"Visit <a href={site}> Google Here</a>")
+    
+ urls.py (no change in code)
+ 
+ from django.urls import path
+#from app.views import hello, job_detail
+from app import views
+
+urlpatterns=[
+    path('',views.hello),
+    path('job/<id>',views.job_detail),
+]
