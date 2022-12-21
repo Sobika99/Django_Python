@@ -1,0 +1,12 @@
+>>http://127.0.0.1:8000/job/121324324324  
+#any number can be passed after job/...
+
+changes made :
+>>jobsapp>>app
+
+#views.py
+def job_detail(request,id):
+    return HttpResponse("Job Detail page")
+    
+#urls.py
+path('job/<id>',views.job_detail),
