@@ -1,0 +1,22 @@
+HttpResponseNotFound - gives 404 error in status code
+        return HttpResponseNotFound("Not found")
+
+HttpResponse - will show 200 OK status
+        return HttpResponse("Not found")
+
+
+from django.http import HttpResponse, HttpResponseNotFound
+....
+....
+....
+def job_detail(request,id):
+    print(type(id))
+    try:
+        if id == 0:
+            return redirect(reverse('jobs_home'))
+        return_html = f"<h1>{job_title[id]}</h1> <h3>{job_description[id]}</h3>"
+        return HttpResponse(return_html)
+    except:
+        return HttpResponseNotFound("Not found")
+        
+ 
