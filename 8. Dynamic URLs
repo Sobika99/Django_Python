@@ -6,7 +6,7 @@ changes made :
 
 #views.py
 def job_detail(request,id):
-    return HttpResponse("Job Detail page")
+    return HttpResponse(f"Job Detail page {id}")
     
 #urls.py
 path('job/<id>',views.job_detail),
