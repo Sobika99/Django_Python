@@ -1,0 +1,27 @@
+Request types
+> Get - https://www.employees.com/employees
+> post - 201(created) #providing new files in server
+> put - update already existing information in server
+> Delete
+
+2 way comminucation client and server
+status call - 3 digit code - http code
+shows - result success or wrong
+
+Status code:
+-------------------
+1XX - Information code
+2XX - Request success
+3XX - Redirection , further steps need
+4xx - Error from client side. ex: 401 error
+5xx - Server related error
+
+Imp status codes:
+------------------
+200 OK - req success
+400 Bad request - req not send in correct way / bad request
+401 Unauthorized - valid credentia required
+404 Not found
+500 internal server error - server error
+503 service unavailable - may be server maintainace , server overloaded
+
