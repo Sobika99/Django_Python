@@ -1,0 +1,24 @@
+#jobsapp>>app
+#jobsapp>>app>>urls.py 
+
+from django.urls import path
+from app.views import hello, job_detail
+urlpatterns=[
+    path('',hello),
+    path('job/1',job_detail),
+]
+
+#jobsapp>>app>>views.py
+
+from django.shortcuts import render
+from django.http import HttpResponse
+# Create your views here.
+def hello(request):
+    return HttpResponse("Hello World")
+
+#"<Domain>/job/1" --> job detail page
+
+def job_detail(request):
+    return HttpResponse("Job Detail page")
+    
+#close jobsapp>>jobsapp project
