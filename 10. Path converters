@@ -1,0 +1,23 @@
+#type1 path converter
+1.int
+2.str
+3.slug
+4.uuid
+
+1.>>app>> urls.py 
+  path('job/<int:id>',views.job_detail),
+ >> views.py
+      return_html = f"<h1>{job_title[id]}</h1> <h3>{job_description[id]}</h3>"
+
+2.str - default type
+  path('job/<id>',views.job_detail), (or)
+    path('job/<str:id>',views.job_detail),
+
+
+3,slug - http://blog.com/my-first-blog  [here the my-first-blog is meant to be slug]
+  path('job/<slug:id>',views.job_detail),
+
+
+4.uuid - Universally unique identifier [https://www.bing.com/search?q=sfsddf&cvid=5d3d0532786f]
+  path('job/<uuid:id>',views.job_detail),
+
