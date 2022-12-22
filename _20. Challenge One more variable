@@ -1,0 +1,14 @@
+views.py
+
+def hello(request):
+    list= ["alpha","beta"]
+    temp = TempClass()
+    context ={"name":" Django","first_list":list,"temp_object": temp,"age":30}
+    return render(request,"app/hello.html",context)
+*******************************************
+hello.html
+
+<h1>Hello{{name}}</h1>
+<h2>Age : {{age}}</h2>
+<h2>{{first_list.0}}</h2>
+<h2>{{temp_object.x}}</h2>
