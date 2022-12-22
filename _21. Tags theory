@@ -1,0 +1,7 @@
+Piece of code in django
+Syntax : {% %}
+
+tags : for conditional , loops and more
+Extend tags - for inheritence
+Import tags- specifying imports 
+block tags - declare the blocks
