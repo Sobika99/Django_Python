@@ -1,0 +1,20 @@
+transfer the values of variables in templates
+using pipe character : |
+
+refer : https://docs.djangoproject.com/en/4.1/ref/templates/builtins/#built-in-filter-reference
+Built-in filter reference
+
+example :
+
+{{ value|add:"2" }}
+If value is 4, then the output will be 6.
+
+{{ value|capfirst }}
+If value is "django", the output will be "Django".
+
+hello.html
+*******************************************
+<h1> Filters</h1>
+{{first_list|length}}
+<br>
+{{first_list| length_is:"3"}}
