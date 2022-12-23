@@ -1,0 +1,39 @@
+jobsapp>> app>>models
+
+from django.db import models
+
+# Create your models here.
+class JobPost(models.Model):
+    title = models.CharField(max_length=200)
+ 
+ 
+ open terminal :
+ 
+ python manage.py makemigrations
+  - Automatic file created in model in name 0001
+ python manage.py sqlmigrate app 0001
+  -   Check output in shell
+ python manage.py showmigrations
+ python manage.py migrate
+ 
+ ***********************************************************
+Migration - linking DB and django
+
+warning : You have 18 unapplied migration(s). Your project may  you apply the migrations for app(s): admin, auth, co
+Run 'python manage.py migrate' to apply them.
+
+Why this warning ??
+        These tables are created in db
+        Django needs this table
+        
+How to run migration?
+***********************************************************
+  make migration:
+    - makemigrations : create migration based on changes in model
+    - sqlmigrate : sql command for migration
+    - migration : to runring the migration (apply/ un-apply)
+    - showmigrations : displays list of migration in project along with status
+ ***********************************************************
+   
+  
+    
