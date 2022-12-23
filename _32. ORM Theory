@@ -1,0 +1,17 @@
+What is ORM
+  - Django is python based
+  - Every application built in python have entities represented by "CLASS" 
+  - attributes ex: name, age
+  - Class and table will represent the entity of real worl
+  - Coloumns : attributes are represented
+ 
+ How to represent mulitple customers??
+  - Assign abject for every customer
+  - ex: customer class 
+  - attributes of customer class : first_name, last_name
+  - create obj for every attributes.
+  - every obj created by blueprint of class
+ 
+ How to represent customers in DB?
+  - objects became record/row
+  - Attributes in class mapped as column
