@@ -1,0 +1,48 @@
+Databse
+
+1. Scalibility 
+2. used to store data and maintain the state of application
+3. Ex: fb, amazon 
+4. fb - profile picture still there after updating in fb. Which means fb stores DP in DB
+5. Used for mobil application also
+
+
+How to access by DB?
+
+1. sql - Structured query language 
+2. DB rewuires the comphresenive db software proram  known to be DBMS
+3. DBMS - interface between db and users. Manage the information
+4. Admin work can also be done
+5. DMBS sooftware - sql, mysql
+
+
+DB types:
+1. Relational 
+  . Structured data , example : spreedsheet, excel
+  - EX: myqsl, sql server, oracle db
+  - stores data in rows and columns called schema
+
+2. Non-relational
+  - non structured
+  - used when we need flexibility
+  
+
+Primary Key: 
+  - stores information as json string
+  - ex: ecommerce - stores information of customer : every customer identified by unique key! If two customers with same name but customer id is varied. Which means primary key
+  - ex: john need to update city db. Multiple people can have name "john", so primary key is helpful here. With the use of primary key we can update city
+  - Data not corrupted
+  
+Foreign key :
+   - repeated information can be stored in DB.
+   - example: one single customer orders couple of items
+   - So create seperate order table and link to customer table
+   - redudancy decreased
+   - Here "order_id: is primary key. "Customer_id" in the 'orders" table is meant as foreign key
+   
+Linking customer and order known as "Relationships"
+Method of eliminating / removing redundant data freom DB known as " Normalization"
+
+Manipulation:
+  - SQL : Structured Qurey language
+  - Select, Insert, Delete , update, Drop are some commands used in relational DB. 
