@@ -1,0 +1,60 @@
+mode;s.py
+
+from django.db import models
+
+# Create your models here.
+class JobPost(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.CharField(max_length= 200)
+    data = models.DateTimeField(auto_now_add=True)
+    salary = models.IntegerField()
+  
+  
+  run shell . check wiki
+
+
+refer wiki for more details
+
+env) PS C:\Users\HP\Desktop\django\jobsapp\jobsapp> python manage.py makemigrations
+It is impossible to add the field 'data' with 'auto_now_add=True' to jobpost without providing a default. This is because the database needs something to populate existing rows.
+ 1) Provide a one-off default now which will be set on all existing rows       
+ 2) Quit and manually define a default value in models.py.
+ 
+>>> Select an option: 1
+
+Please enter the default value as valid Python.
+Accept the default 'timezone.now' by pressing 'Enter' or provide another value.The datetime and django.utils.timezone modules are available, so it is possible to provide e.g. timezone.now as a value.
+Type 'exit' to exit this prompt
+
+>>> [default: timezone.now] >>> timezone.now()
+
+It is impossible to add a non-nullable field 'description' to jobpost without specifying a default. This is because the database needs something to populate existing rows.
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit and manually define a default value in models.py.
+ 
+>>> Select an option: 1
+
+Please enter the default value as valid Python.
+The datetime and django.utils.timezone modules are available, so it is possible to provide e.g. timezone.now as a value.
+Type 'exit' to exit this prompt
+
+>>> ""
+
+It is impossible to add a non-nullable field 'salary' to jobpost without specifying a default. This is because the database needs something to populate existing rows.
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit and manually define a default value in models.py.
+ 
+>>> Select an option: 1
+
+Please enter the default value as valid Python.
+The datetime and django.utils.timezone modules are available, so it is possible to provide e.g. timezone.now as a value.
+Type 'exit' to exit this prompt
+>>> 0
+Migrations for 'app':
+  app\migrations\0002_jobpost_data_jobpost_description_jobpost_salary.py       
+    - Add field data to jobpost
+    - Add field description to jobpost
+    - Add field salary to jobpost
+(env) PS C:\Users\HP\Desktop\django\jobsapp\jobsapp> 
