@@ -15,3 +15,12 @@ What is ORM
  How to represent customers in DB?
   - objects became record/row
   - Attributes in class mapped as column
+
+
+Purpose of ORM:
+  - Whenever the class is created , the attributes are automatically converted to columns 
+  - When the obj is created, the object's Data can automatically saved in database as rows in table.
+  - Developers life easier 
+  - translation between app and sql can occured automatically using ORM , not required to list many commands for app and DB connection.
+  
+  
