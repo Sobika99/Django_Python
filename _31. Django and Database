@@ -1,0 +1,13 @@
+Django works only on relational DB. Doesn't support non-sql
+
+Django officially supports the following databases:
+PostgreSQL
+MariaDB
+MySQL
+Oracle
+SQLite
+
+SQL lite :
+  - File based DB - data stores file i disk
+  - Self contained - No exteranl packages required
+  
