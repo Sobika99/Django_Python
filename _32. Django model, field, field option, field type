@@ -1,0 +1,29 @@
+Model
+  - class
+  
+Field
+  - atributes in columns
+  
+Type of field 
+   - determine the type of data ex:EmailField, DateField
+   - refer : https://docs.djangoproject.com/en/4.1/ref/models/fields/
+   
+ Field Option
+   - every field have certain resriction - like max 50 char
+   - restrictions are defined by field option ex: null , blank, CharField
+   - refer : https://docs.djangoproject.com/en/4.1/ref/models/fields/
+   
+  Syntax:
+******************************************************
+from django.db import models
+class customer (model.Model):
+  first_name = models.Charfield ( max_lenght = 30 )
+  last_name = models.charfield ( min_lenght = 10 )
+******************************************************
+      
+      Here class : model
+           first_name, last_name : fields
+           Char_field : Field type
+           Field option : Restriction max_lenght = 30
+           
+           
