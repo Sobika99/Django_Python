@@ -1,0 +1,21 @@
+exclude method :
+returns the data that not matching condition specified 
+
+filter :
+
+JobPost.objects.filter(salary = 100000, title ="third job post")
+<QuerySet [<JobPost: third job post>]>
+
+exclude:
+
+>>> JobPost.objects.exclude(salary = 100000, title= "third job post")
+<QuerySet [<JobPost:  First job post>, <JobPost: Second job post>, <JobPost: fourth job post>]>
+
+>>> JobPost.objects.exclude()
+<QuerySet [<JobPost:  First job post>, <JobPost: Second job post>, <JobPost: third job post>, <JobPost: fourth job post>]>
+
+>>> JobPost.objects.exclude(salary = 50000)
+<QuerySet [<JobPost:  First job post>, <JobPost: Second job post>, <JobPost: third job post>, <JobPost: fourth job post>]>
+
+>>> JobPost.objects.exclude(salary = "100000")
+<QuerySet [<JobPost:  First job post>, <JobPost: Second job post>]>
