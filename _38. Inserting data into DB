@@ -1,5 +1,11 @@
 django shell - python based shell to access DB
 
 python manage.py shell
+from app.models import JobPost
+>>> job_post_1 = JobPost(title =" First job post", description = " example", 
+salary = 5000)
+>>> job_post_1.save()
 
+#without save method
+>>> JobPost.objects.create(title= "Second job post",description = "example 2", salary = 3000)
 
