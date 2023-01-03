@@ -1,0 +1,8 @@
+>>> JobPost.objects.filter().exclude(salary = 100000)
+<QuerySet [<JobPost:  First job post updated>, <JobPost: Second job post>]>
+
+>>> JobPost.objects.exclude(salary = 100000)
+<QuerySet [<JobPost:  First job post updated>, <JobPost: Second job post>]>
+
+>>> all_jobs.filter( title__contains = "fourth").filter (salary = 100000)
+<QuerySet [<JobPost: fourth job post>]>
