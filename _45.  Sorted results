@@ -1,0 +1,21 @@
+order_by()
+
+- retrive data in sorted manner 
+
+>>> JobPost.objects.order_by("salary")
+<QuerySet [<JobPost: Second job post>, <JobPost:  First job post>, <JobPost: third job post>, <JobPost: fourth job post>]>
+
+
+>>> JobPost.objects.order_by("-salary")
+<QuerySet [<JobPost: third job post>, <JobPost: fourth job post>, <JobPost:  First job post>, <JobPost: Second job post>]>
+
+>>> JobPost.objects.order_by("title")[0]
+<JobPost:  First job post>
+
+>>> JobPost.objects.order_by("-id", "salary")      
+<QuerySet [<JobPost: fourth job post>, <JobPost: third job post>, <JobPost: Second job post>, <JobPost:  First job post>]>
+
+random order :
+
+>>> JobPost.objects.order_by("?")
+<QuerySet [<JobPost: third job post>, <JobPost:  First job post>, <JobPost: fourth job post>, <JobPost: Second job post>]>
