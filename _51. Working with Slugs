@@ -1,0 +1,46 @@
+slug - generating human friendly URL
+USES - title of object
+Not human friendly - http://127.0.0.1:8000/job/2
+
+URL should : 
+  - https://www.amazon.in/Boldfit-Women-Carrying-Exercise-Cushion
+  - slug : Boldfit-Women-Carrying-Exercise-Cushion
+
+How to implement in our project?
+  -  slug field : to store 
+  
+ models.py
+ 
+ from django.db import models
+
+# Create your models here.
+class JobPost(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.CharField(max_length= 200)
+    data = models.DateTimeField(auto_now_add=True)
+    salary = models.IntegerField()
+    slug = models.SlugField( null= True)
+
+    def __str__(self):
+       return self.title
+       
+terminal :
+
+python manage.py makemigrations
+python manage.py migrate
+
+refresh DB
+New migration and field would be created
+
+
+django.utils.text
+https://docs.djangoproject.com/en/4.1/ref/utils/
+
+
+terminal :
+
+>>>from django.utils.text import slugify
+>>> slugify("First job post")
+'first-job-post
+
+
