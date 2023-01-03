@@ -1,0 +1,11 @@
+get method
+- returns objects itself, returns error if we try fetching no matching records available in db.
+- fetch single record 
+
+>>> JobPost.objects.get(salary = 100000)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\HP\Desktop\django\jobsapp\env\lib\site-packages\django\db\models\manager.py", line 85, in manager_method 
+***************************************************************
+filter method -
+returns query set, returns empty record if no record exits, 
