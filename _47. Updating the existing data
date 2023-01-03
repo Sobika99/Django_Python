@@ -1,0 +1,24 @@
+>>> JobPost.objects.filter()
+<QuerySet [<JobPost:  First job post>, <JobPost: Second job post>, <JobPost: third job post>, <JobPost: fourth job post>]>
+>>> JobPost.objects.filter()[0]
+<JobPost:  First job post>
+>>> job_post_1 = JobPost.objects.filter()[0]
+>>> print(job_post_1)
+ First job post
+>>> job_post_1
+<JobPost:  First job post>
+>>> job_post_1.title
+' First job post'
+>>> job_post_1.salary
+5000
+
+
+save()
+>>> job_post_1.title=" First job post updated"
+
+>>> JobPost.objects.filter()
+<QuerySet [<JobPost:  First job post>, <JobPost: Second job post>, <JobPost: third job post>, <JobPost: fourth job post>]>
+>>> job_post_1.save()
+
+
+
