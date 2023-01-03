@@ -1,0 +1,5 @@
+django shell - python based shell to access DB
+
+python manage.py shell
+
+
