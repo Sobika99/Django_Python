@@ -1,0 +1,6 @@
+all_post = JobPost.objects.all()
+print(all_post)
+
+output :
+<QuerySet [<JobPost: JobPost object (1)>, <JobPost: JobPost 
+object (2)>, <JobPost: JobPost object (3)>]>
