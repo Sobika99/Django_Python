@@ -1,0 +1,15 @@
+>>> JobPost.objects.filter(salary >3000)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'salary' is not defined
+
+here field lookups - full potential for using sql
+
+https://docs.djangoproject.com/en/4.1/ref/models/querysets/#field-lookups
+
+>>> JobPost.objects.filter(salary__gte= 3000)   
+<QuerySet [<JobPost:  First job post>, <JobPost: Second job post>, <JobPost: third job post>, <JobPost: fourth job post>]>
+
+>>> JobPost.objects.filter(salary__gt=3000)
+<QuerySet [<JobPost:  First job post>, <JobPost: third job post>, <JobPost: fourth job post>]>
+
