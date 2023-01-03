@@ -1,0 +1,10 @@
+Gonna fetch "example" description
+
+
+in terminal :
+
+>>> JobPost.objects.filter(salary = 5000)
+<QuerySet [<JobPost:  First job post>]>
+
+JobPost.objects.filter(salary = 100000)
+<QuerySet [<JobPost: third job post>, <JobPost: fourth job post>]>
