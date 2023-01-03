@@ -1,0 +1,12 @@
+str method - print the instance, string representation 
+
+models
+def __str__(self):
+        return self.title
+       
+Terminal :
+>>> from app.models import JobPost
+>>> JobPost.objects.all()
+
+output: 
+<QuerySet [<JobPost:  First job post>, <JobPost: Second job post>, <JobPost: third job post>]>
